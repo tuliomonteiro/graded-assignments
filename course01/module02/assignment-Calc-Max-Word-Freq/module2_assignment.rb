@@ -65,6 +65,7 @@ class LineAnalyzer
     end
 
 #  Implement a class called Solution. 
+
 class Solution
 
   # Implement the following read-only attributes in the Solution class.
@@ -85,7 +86,8 @@ class Solution
   def analyze_file()
     File.foreach('text.txt') do |content| |line|
       LineAnalyzer = LineAnalyzer.new(content,line)
-      
+      @analyzers << LineAnalyzer
+
   #* calculate_line_with_highest_frequency() - determines the highest_count_across_lines and 
   #  highest_count_words_across_lines attribute values
   #* print_highest_word_frequency_across_lines() - prints the values of LineAnalyzer objects in 
